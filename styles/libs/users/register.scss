@@ -1,0 +1,12 @@
+.register {
+    background: linear-gradient(135deg, #45484d 0%, #000000 100%);
+    height: $height-login-page;
+    padding: $padding-y-login-page 0;
+    &-panel {
+        width: 650px;
+        position: $position-login-page;
+        background-color: var(--surface-a);
+        left: calc(50% - 325px);
+        top: calc(50% - 262px);
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npx nx serve ngshop",
+            "name": "run ngshop",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npx nx serve ngshop --open",
+            "name": "run ngshop open",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npx nx serve admin",
+            "name": "run admin",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npx nx serve admin --open",
+            "name": "run admin open",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+    ]
+}

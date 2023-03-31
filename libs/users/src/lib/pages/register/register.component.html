@@ -1,0 +1,171 @@
+<p-toast></p-toast>
+<div class="register">
+    <div class="register-panel">
+        <div class="row">
+            <div class="col-12 p-5">
+                <h3 class="pb-5">register Page</h3>
+                <form [formGroup]="form">
+                    <div class="p-fluid formgrid row">
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="name">Name</label>
+                            <input
+                                formControlName="name"
+                                id="name"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="userForm['name'].invalid && isSubmitted"
+                                class="p-error"
+                                >Name is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="email">Email</label>
+                            <input
+                                formControlName="email"
+                                id="email"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="userForm['email'].invalid && isSubmitted"
+                                class="p-error"
+                                ><span
+                                    *ngIf="
+                                        userForm['email'].errors &&
+                                        userForm['email'].errors['required']
+                                    "
+                                >
+                                    Email is required
+                                </span>
+                                <span
+                                    *ngIf="
+                                        userForm['email'].errors &&
+                                        userForm['email'].errors['email']
+                                    "
+                                >
+                                    Email is invalid
+                                </span>
+                            </small>
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="password">Password</label>
+                            <input
+                                formControlName="password"
+                                id="password"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="
+                                    userForm['password'].invalid && isSubmitted
+                                "
+                                class="p-error"
+                                >Password is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="phone">Phone</label>
+                            <p-inputMask
+                                formControlName="phone"
+                                mask="999 999-9999"
+                                placeholder="999 999-9999"
+                            ></p-inputMask>
+                            <small
+                                *ngIf="userForm['phone'].invalid && isSubmitted"
+                                class="p-error"
+                                >Phone is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="street">Street</label>
+                            <input
+                                formControlName="street"
+                                id="street"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="
+                                    userForm['street'].invalid && isSubmitted
+                                "
+                                class="p-error"
+                                >Street is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="apartment">Apartment</label>
+                            <input
+                                formControlName="apartment"
+                                id="apartment"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="
+                                    userForm['apartment'].invalid && isSubmitted
+                                "
+                                class="p-error"
+                                >Apartment is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="zip">Zip Code</label>
+                            <input
+                                formControlName="zip"
+                                id="zip"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="userForm['zip'].invalid && isSubmitted"
+                                class="p-error"
+                                >Zip is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="city">City</label>
+                            <input
+                                formControlName="city"
+                                id="city"
+                                type="text"
+                                pInputText
+                            />
+                            <small
+                                *ngIf="userForm['city'].invalid && isSubmitted"
+                                class="p-error"
+                                >City is required</small
+                            >
+                        </div>
+                        <div class="field col-lg-4 col-md-6 col-12">
+                            <label for="country">Country</label>
+                            <p-dropdown
+                                [options]="countries"
+                                formControlName="country"
+                                optionLabel="name"
+                                optionValue="id"
+                                [filter]="true"
+                                filterBy="name"
+                                placeholder="select a category"
+                            ></p-dropdown>
+                            <small
+                                *ngIf="
+                                    userForm['country'].invalid && isSubmitted
+                                "
+                                class="p-error"
+                                >Country is required</small
+                            >
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 pt-3">
+                            <p-button
+                                label="Submit"
+                                (onClick)="onSubmit()"
+                            ></p-button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

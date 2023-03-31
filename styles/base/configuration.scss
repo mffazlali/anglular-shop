@@ -1,0 +1,17 @@
+body,
+.p-component {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    @include reset-list;
+}
+$position-login-page: absolute;
+$height-login-page: 100vh;
+$padding-y-login-page:0;
+$ui-spinner-left:0;
+$ui-spinner-top:0;

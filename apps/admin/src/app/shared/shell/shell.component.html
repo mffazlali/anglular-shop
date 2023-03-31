@@ -1,0 +1,8 @@
+<div class="admin-wrapper">
+    <admin-header (slideMode)="statusSlide($event)"></admin-header>
+    <admin-sidebar [statusMode]="slideMode"></admin-sidebar>
+    <div class="admin-main">
+        <ui-spinner></ui-spinner>
+        <router-outlet></router-outlet>
+    </div>
+</div>

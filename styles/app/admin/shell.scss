@@ -1,0 +1,129 @@
+.admin {
+    &-wrapper {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    &-main {
+        width: calc(100% - 175px);
+        height: 100%;
+        margin-left: 175px;
+        margin-top: 45px;
+    }
+
+    &-header {
+        background-color: black;
+        padding: 2px;
+
+        .links {
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    display: block;
+                    width: 100%;
+
+                    a {
+                        color: var(--surface-a);
+                        padding: 10px 15px;
+                        display: block;
+                        width: 100%;
+
+                        &:hover {
+                            color: var(--blue-700);
+                        }
+
+                        i {
+                            margin-top: 0;
+                            margin-right: 8px;
+                        }
+
+                        &.logout {
+                            background-color: var(--blue-500);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-sidebar {
+        position: fixed;
+        margin-top: 40px;
+        width: 175px;
+        height: 100%;
+        background-color: black;
+        transition: all 0.5s ease-in-out;
+        z-index: 2030;
+        overflow: auto;
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            padding: 10px 0;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .links {
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    display: block;
+                    width: 100%;
+
+                    a {
+                        color: var(--surface-a);
+                        padding: 10px 15px;
+                        display: block;
+                        width: 100%;
+
+                        &:hover {
+                            background-color: var(--blue-700);
+                        }
+
+                        i {
+                            margin-top: 0;
+                            margin-right: 8px;
+                            // float: left;
+                        }
+
+                        &.logout {
+                            background-color: var(--blue-500);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        &-sidebar {
+            position: fixed;
+            left: -260px;
+        }
+        &-main {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    &-page {
+        padding: 15px;
+    }
+}
+
+.slide {
+    left: 0px;
+}

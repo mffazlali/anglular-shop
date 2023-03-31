@@ -1,0 +1,30 @@
+header {
+    padding: 0;
+    margin-bottom: 5px;
+    .logo {
+        img {
+            width: 60px;
+            height: 80px;
+        }
+    }
+
+    .search {
+        // padding-top: 30px;
+        margin: auto;
+    }
+
+    .navigation {
+        display: contents;
+    }
+
+    .tools {
+        padding-top: 20px;
+        text-align: end;
+        .pi {
+            margin-right: 10px;
+        }
+        i {
+            cursor: pointer;
+        }
+    }
+}

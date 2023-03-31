@@ -1,0 +1,11 @@
+.spinner {
+    position: absolute;
+    left: calc(50vw - $ui-spinner-left);
+    top: calc(50vh - $ui-spinner-top);
+}
+
+@media only screen and (max-width: 992px) {
+    .spinner {
+        left: calc(50vw - 0px);
+    }
+}
